@@ -1,0 +1,23 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+<BaseLayout title="CV — Siow Meng Low">
+  <main class="wrap">
+    <a class="back" href="/">← Home</a>
+    <h1>CV</h1>
+    <p>
+      Download: <a href="/cv.pdf">cv.pdf</a>
+    </p>
+
+    <style>
+      .wrap{max-width:900px;margin:0 auto;padding:40px 18px;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+      .back{display:inline-block;margin-bottom:18px;opacity:.8}
+      h1{margin:0 0 10px;font-size:28px}
+      .hint{opacity:.75}
+      a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+      @media (prefers-color-scheme: dark){
+        body{background:#0b0c0f;color:#e9eef7}
+      }
+    </style>
+  </main>
+</BaseLayout>

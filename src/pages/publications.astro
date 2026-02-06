@@ -1,0 +1,89 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const pubs = [
+  {
+    year: "2026",
+    title: "TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback",
+    venue: "Under review; earlier: ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival)",
+    links: [
+      { label: "OpenReview (workshop)", href: "https://openreview.net/pdf?id=H1xdhKlN21" },
+    ],
+    note: "Current extended version (more theory + experiments) planned for arXiv.",
+  },
+  {
+    year: "2024",
+    title: "Safe Reinforcement Learning with Learned Non-Markovian Safety Constraints",
+    venue: "arXiv",
+    links: [{ label: "PDF", href: "https://arxiv.org/pdf/2405.03005" }],
+  },
+  {
+    year: "2023",
+    title: "Safe MDP Planning by Learning Temporal Patterns of Undesirable Trajectories and Averting Negative Side Effects",
+    venue: "ICAPS 2023",
+    links: [{ label: "PDF", href: "https://ojs.aaai.org/index.php/ICAPS/article/view/27241/27014" }],
+  },
+  {
+    year: "2022",
+    title: "Sample-efficient Iterative Lower Bound Optimization of Deep Reactive Policies for Planning in Continuous MDPs",
+    venue: "AAAI 2022",
+    links: [{ label: "PDF", href: "https://ojs.aaai.org/index.php/AAAI/article/view/21220" }],
+  },
+  {
+    year: "2009",
+    title: "Prediction Based Energy-efficient Task Allocation for Delay-constrained Wireless Sensor Networks",
+    venue: "IEEE SECON Workshops 2009",
+    links: [{ label: "IEEE", href: "https://ieeexplore.ieee.org/document/5172956" }],
+  },
+];
+---
+<BaseLayout title="Publications — Siow Meng Low">
+  <main class="wrap">
+    <a class="back" href="/">← Home</a>
+    <h1>Publications</h1>
+    <p class="hint">
+      Selected publications and preprints. For a full list, see
+      <a href="https://scholar.google.com/citations?user=3lRmrq8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
+    </p>
+
+    <ol class="list">
+      {pubs.map((p) => (
+        <li class="item">
+          <div class="row">
+            <span class="year">{p.year}</span>
+            <div class="content">
+              <div class="title">{p.title}</div>
+              <div class="venue">{p.venue}</div>
+              {p.note && <div class="note">{p.note}</div>}
+              <div class="links">
+                {p.links.map((l) => (
+                  <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>
+                ))}
+              </div>
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+
+    <style>
+      .wrap{max-width:900px;margin:0 auto;padding:40px 18px;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+      .back{display:inline-block;margin-bottom:18px;opacity:.8}
+      h1{margin:0 0 10px;font-size:28px}
+      .hint{margin:0 0 18px;opacity:.8;line-height:1.5}
+      .list{padding:0;margin:0;list-style:none;display:grid;gap:12px}
+      .item{border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:14px}
+      .row{display:flex;gap:14px}
+      .year{min-width:52px;font-weight:700;opacity:.75}
+      .title{font-weight:650}
+      .venue{opacity:.8;margin-top:3px}
+      .note{opacity:.75;margin-top:6px}
+      .links{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+      a{color:inherit;text-decoration:underline;text-underline-offset:3px}
+      @media (prefers-color-scheme: dark){
+        body{background:#0b0c0f;color:#e9eef7}
+        .item{border-color:rgba(255,255,255,.12)}
+      }
+    </style>
+  </main>
+</BaseLayout>
