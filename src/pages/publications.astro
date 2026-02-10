@@ -1,88 +1,212 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-
+// TraCeS: 
+// year={2025},
+// note={Non-archival workshop paper. Extended version under review; planned arXiv release.}
 const pubs = [
   {
-    year: "2026",
+    year: 2025,
     title: "TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback",
-    venue: "Under review; earlier: ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival)",
+    venue: "Under review · earlier: ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival)",
+    authors: ["Siow Meng Low", "Akshat Kumar"],
+    highlight:
+      "Turns rollout-level safety labels into per-step safety signals, enabling agents to learn safer behavior without hand-designed safety costs.",
+    note:
+      "Extended version (major additions: theory + experiments) planned for arXiv.",
     links: [
-      { label: "OpenReview (workshop)", href: "https://openreview.net/pdf?id=H1xdhKlN21" },
+      { label: "Workshop PDF", href: "https://openreview.net/pdf?id=H1xdhKlN21" },
+      { label: "BibTeX", href: "#bibtex-low2025traces" },
     ],
-    note: "Current extended version (more theory + experiments) planned for arXiv.",
+    bibId: "low2025traces",
+    bibtex: `@inproceedings{low2025traces,
+  title={TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback},
+  author={Low, Siow Meng and Kumar, Akshat},
+  booktitle={ICLR 2025 Workshop on Bidirectional Human-AI Alignment},}
+}`,
   },
   {
-    year: "2024",
+    year: 2024,
     title: "Safe Reinforcement Learning with Learned Non-Markovian Safety Constraints",
-    venue: "arXiv",
-    links: [{ label: "PDF", href: "https://arxiv.org/pdf/2405.03005" }],
+    venue: "arXiv:2405.03005",
+    authors: ["Siow Meng Low", "Akshat Kumar"],
+    highlight:
+      "Learned non-Markovian safety constraints for RL, capturing temporal safety requirements beyond stepwise costs.",
+    links: [
+      { label: "arXiv PDF", href: "https://arxiv.org/pdf/2405.03005" },
+      { label: "BibTeX", href: "#bibtex-low2024safe" },
+    ],
+    bibId: "low2024safe",
+    bibtex: `@article{low2024safe,
+  title={Safe Reinforcement Learning with Learned Non-Markovian Safety Constraints},
+  author={Low, Siow Meng and Kumar, Akshat},
+  journal={arXiv preprint arXiv:2405.03005},
+  year={2024}
+}`,
   },
   {
-    year: "2023",
-    title: "Safe MDP Planning by Learning Temporal Patterns of Undesirable Trajectories and Averting Negative Side Effects",
+    year: 2023,
+    title:
+      "Safe MDP Planning by Learning Temporal Patterns of Undesirable Trajectories and Averting Negative Side Effects",
     venue: "ICAPS 2023",
-    links: [{ label: "PDF", href: "https://ojs.aaai.org/index.php/ICAPS/article/view/27241/27014" }],
+    authors: ["Siow Meng Low", "Akshat Kumar", "Scott Sanner"],
+    highlight:
+      "Planning with learned temporal patterns of undesirable behavior to reduce negative side effects without requiring an explicit cost specification.",
+    links: [
+      { label: "Publisher", href: "https://ojs.aaai.org/index.php/ICAPS/article/view/27241" },
+      { label: "PDF", href: "https://ojs.aaai.org/index.php/ICAPS/article/view/27241/27014" },
+      { label: "BibTeX", href: "#bibtex-low2023safe" },
+    ],
+    bibId: "low2023safe",
+    bibtex: `@inproceedings{low2023safe,
+  title={Safe MDP planning by learning temporal patterns of undesirable trajectories and averting negative side effects},
+  author={Low, Siow Meng and Kumar, Akshat and Sanner, Scott},
+  booktitle={Proceedings of the International Conference on Automated Planning and Scheduling},
+  volume={33},
+  pages={596--604},
+  year={2023}
+}`,
   },
   {
-    year: "2022",
-    title: "Sample-efficient Iterative Lower Bound Optimization of Deep Reactive Policies for Planning in Continuous MDPs",
+    year: 2022,
+    title:
+      "Sample-efficient Iterative Lower Bound Optimization of Deep Reactive Policies for Planning in Continuous MDPs",
     venue: "AAAI 2022",
-    links: [{ label: "PDF", href: "https://ojs.aaai.org/index.php/AAAI/article/view/21220" }],
+    authors: ["Siow Meng Low", "Akshat Kumar", "Scott Sanner"],
+    highlight:
+      "A sample-efficient optimisation approach for deep reactive policies in continuous MDP planning, using iterative lower-bound optimisation.",
+    links: [
+      { label: "Publisher", href: "https://ojs.aaai.org/index.php/AAAI/article/view/21220" },
+      { label: "BibTeX", href: "#bibtex-low2022sample" },
+    ],
+    bibId: "low2022sample",
+    bibtex: `@inproceedings{low2022sample,
+  title={Sample-efficient iterative lower bound optimization of deep reactive policies for planning in continuous MDPs},
+  author={Low, Siow Meng and Kumar, Akshat and Sanner, Scott},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={9},
+  pages={9840--9848},
+  year={2022}
+}`,
   },
   {
-    year: "2009",
-    title: "Prediction Based Energy-efficient Task Allocation for Delay-constrained Wireless Sensor Networks",
+    year: 2009,
+    title:
+      "Prediction Based Energy-efficient Task Allocation for Delay-constrained Wireless Sensor Networks",
     venue: "IEEE SECON Workshops 2009",
-    links: [{ label: "IEEE", href: "https://ieeexplore.ieee.org/document/5172956" }],
+    authors: ["Wendong Xiao", "Siow Meng Low", "Chen Khong Tham", "Sajal Das"],
+    highlight:
+      "Prediction-based task allocation to reduce energy usage while meeting delay constraints in wireless sensor networks.",
+    links: [
+      { label: "IEEE", href: "https://ieeexplore.ieee.org/document/5172956" },
+      { label: "BibTeX", href: "#bibtex-xiao2009prediction" },
+    ],
+    bibId: "xiao2009prediction",
+    bibtex: `@inproceedings{xiao2009prediction,
+  title={Prediction based energy-efficient task allocation for delay-constrained wireless sensor networks},
+  author={Xiao, Wendong and Low, Siow Meng and Tham, Chen Khong and Das, Sajal},
+  booktitle={2009 6th IEEE Annual Communications Society Conference on Sensor, Mesh and Ad Hoc Communications and Networks Workshops},
+  pages={1--3},
+  year={2009},
+  organization={IEEE}
+}`,
   },
 ];
+
+const byYear = pubs.reduce((acc, p) => {
+  const y = String(p.year);
+  (acc[y] ??= []).push(p);
+  return acc;
+}, /** @type {Record<string, typeof pubs>} */ ({}));
+
+const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a));
 ---
+
 <BaseLayout title="Publications — Siow Meng Low">
   <main class="wrap">
     <a class="back" href="/">← Home</a>
-    <h1>Publications</h1>
-    <p class="hint">
-      Selected publications and preprints. For a full list, see
-      <a href="https://scholar.google.com/citations?user=3lRmrq8AAAAJ&hl=en&oi=ao" target="_blank" rel="noopener noreferrer">Google Scholar</a>.
-    </p>
 
-    <ol class="list">
-      {pubs.map((p) => (
-        <li class="item">
-          <div class="row">
-            <span class="year">{p.year}</span>
-            <div class="content">
+    <header class="head">
+      <h1>Publications</h1>
+      <p class="hint">
+        Selected papers and preprints. For a complete list, see
+        <a
+          href="https://scholar.google.com/citations?user=3lRmrq8AAAAJ&hl=en&oi=ao"
+          target="_blank"
+          rel="noopener noreferrer"
+          >Google Scholar</a
+        >.
+      </p>
+    </header>
+
+    {years.map((y) => (
+      <section class="yearBlock">
+        <h2 class="yearTitle">{y}</h2>
+
+        <ol class="list">
+          {byYear[y].map((p) => (
+            <li class="item">
               <div class="title">{p.title}</div>
-              <div class="venue">{p.venue}</div>
-              {p.note && <div class="note">{p.note}</div>}
-              <div class="links">
+              <div class="meta">
+                <span class="venue">{p.venue}</span>
+                <span class="dot">·</span>
+                <span class="authors">{p.authors.join(", ")}</span>
+              </div>
+
+              {p.highlight && <p class="highlight">{p.highlight}</p>}
+              {p.note && <p class="note">{p.note}</p>}
+
+              <div class="actions">
                 {p.links.map((l) => (
-                  <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>
+                  <a
+                    class="btn"
+                    href={l.href}
+                    target={l.href.startsWith("#") ? undefined : "_blank"}
+                    rel={l.href.startsWith("#") ? undefined : "noopener noreferrer"}
+                  >
+                    {l.label}
+                  </a>
                 ))}
               </div>
-            </div>
-          </div>
-        </li>
-      ))}
-    </ol>
+
+              <details class="bib" id={`bibtex-${p.bibId}`}>
+                <summary>BibTeX</summary>
+                <pre><code>{p.bibtex}</code></pre>
+              </details>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
 
     <style>
-      .wrap{max-width:900px;margin:0 auto;padding:40px 18px;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
-      .back{display:inline-block;margin-bottom:18px;opacity:.8}
-      h1{margin:0 0 10px;font-size:28px}
-      .hint{margin:0 0 18px;opacity:.8;line-height:1.5}
+      .wrap{max-width:980px;margin:0 auto;padding:40px 18px;font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;}
+      .back{display:inline-block;margin-bottom:18px;opacity:.85}
+      .head{margin-bottom:18px}
+      h1{margin:0 0 10px;font-size:30px;letter-spacing:-0.02em}
+      .hint{margin:0;opacity:.82;line-height:1.55}
+      .yearBlock{margin-top:22px}
+      .yearTitle{margin:0 0 10px;font-size:18px;opacity:.85}
       .list{padding:0;margin:0;list-style:none;display:grid;gap:12px}
-      .item{border:1px solid rgba(0,0,0,.12);border-radius:14px;padding:14px}
-      .row{display:flex;gap:14px}
-      .year{min-width:52px;font-weight:700;opacity:.75}
-      .title{font-weight:650}
-      .venue{opacity:.8;margin-top:3px}
-      .note{opacity:.75;margin-top:6px}
-      .links{margin-top:8px;display:flex;gap:10px;flex-wrap:wrap}
+      .item{border:1px solid rgba(0,0,0,.12);border-radius:16px;padding:16px}
+      .title{font-weight:700;line-height:1.25}
+      .meta{margin-top:6px;opacity:.82;display:flex;gap:8px;flex-wrap:wrap;align-items:baseline}
+      .dot{opacity:.6}
+      .highlight{margin:10px 0 0;line-height:1.55}
+      .note{margin:8px 0 0;opacity:.8;line-height:1.55}
+      .actions{margin-top:12px;display:flex;gap:10px;flex-wrap:wrap}
+      .btn{display:inline-flex;align-items:center;gap:8px;padding:7px 10px;border-radius:999px;border:1px solid rgba(0,0,0,.18);text-decoration:none}
+      .btn:hover{transform:translateY(-1px)}
+      .bib{margin-top:12px}
+      details summary{cursor:pointer;opacity:.9}
+      pre{margin:10px 0 0;padding:12px;border-radius:12px;background:rgba(0,0,0,.04);overflow:auto}
+      code{font-size:13px}
       a{color:inherit;text-decoration:underline;text-underline-offset:3px}
       @media (prefers-color-scheme: dark){
         body{background:#0b0c0f;color:#e9eef7}
         .item{border-color:rgba(255,255,255,.12)}
+        .btn{border-color:rgba(255,255,255,.18);text-decoration:none}
+        pre{background:rgba(255,255,255,.06)}
       }
     </style>
   </main>

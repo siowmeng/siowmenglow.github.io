@@ -5,6 +5,7 @@ const name = "Siow Meng Low";
 const tagline = "ML researcher — safe RL with feedback; exploring RL × LLMs";
 const email = "siowmeng@siowmenglow.com";
 const location = "Singapore (GMT+8)";
+const authorization = "Eligible to work in Singapore."
 
 const links = [
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=3lRmrq8AAAAJ&hl=en&oi=ao" },
@@ -17,16 +18,20 @@ const links = [
 const highlights = [
   {
     title: "TraCeS (Under review; earlier ICLR’25 Alignment workshop)",
-    desc: "Turns rollout-level safety labels into per-step safety signals, enabling agents to learn safer behavior without hand-designed safety costs.",
+    desc: "Turns rollout-level safety labels into per-step safety signals, enabling agents to learn safer behavior without hand-designed safety costs. (Think: learning an internal \"safety meter\" from sparse pass/fail feedback.",
   },
-  {
+/*  {
     title: "Safe RL with learned non-Markovian constraints (arXiv 2024)",
     desc: "Models safety as history-dependent constraints and learns them from data, enabling safe RL when Markovian cost shaping is insufficient.",
-  },
+  },*/
   {
     title: "Safe MDP planning via temporal patterns of unsafe trajectories (ICAPS 2023)",
     desc: "Learns temporal patterns of undesirable behavior and uses them to steer planning away from negative side effects.",
   },
+  {
+    title: "ILBO (AAAI 2022)",
+    desc: "Introduces a sample-efficient iterative lower-bound optimization approach for learning deep reactive policies in continuous control/planning settings.",
+  }
 ];
 ---
 <BaseLayout title={name} description={`${tagline}.`}>
@@ -36,7 +41,7 @@ const highlights = [
       <div>
         <h1>{name}</h1>
         <p class="tag">{tagline}</p>
-        <p class="meta">{location} · <a href={`mailto:${email}`}>{email}</a></p>
+        <p class="meta">{location} · {authorization}  · <a href={`mailto:${email}`}>{email}</a></p>
 
         <nav class="links">
           {links.map((l) => <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
@@ -53,8 +58,9 @@ const highlights = [
         undergraduate CS as an adjunct lecturer while exploring research roles.
       </p>
       <p>
-        My work focuses on safety in reinforcement learning—especially learning from sparse, high-level feedback (e.g., pass/fail
-        safety labels) when explicit cost functions are unavailable.
+        My work focuses safe reinforcement learning from feedback, particularly when safety constraints are implicit, history-dependent, or only available through sparse trajectory-level labels. Lately I’m also exploring the RL × LLM interface for safety and alignment.
+        <!--My work focuses on safety in reinforcement learning—especially learning from sparse, high-level feedback (e.g., pass/fail
+        safety labels) when explicit cost functions are unavailable.-->
       </p>
     </section>
 
