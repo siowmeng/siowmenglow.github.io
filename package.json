@@ -4,9 +4,10 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "cv:build": "tectonic -o public cv/main.tex --keep-logs && mv public/main.pdf public/cv.pdf",
+    "build": "npm run cv:build && astro build"
   },
   "dependencies": {
     "astro": "^5.17.1"

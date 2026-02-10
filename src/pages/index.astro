@@ -5,7 +5,8 @@ const name = "Siow Meng Low";
 const tagline = "ML researcher — safe RL with feedback; exploring RL × LLMs";
 const email = "siowmeng@siowmenglow.com";
 const location = "Singapore (GMT+8)";
-const authorization = "Eligible to work in Singapore."
+//const authorization = "Eligible to work in Singapore (no sponsorship required)."
+const authorization = "No sponsorship required";
 
 const links = [
   { label: "Google Scholar", href: "https://scholar.google.com/citations?user=3lRmrq8AAAAJ&hl=en&oi=ao" },
@@ -46,7 +47,8 @@ const highlights = [
         <nav class="links">
           {links.map((l) => <a href={l.href} target="_blank" rel="noopener noreferrer">{l.label}</a>)}
           <a href="/publications">Publications</a>
-          <a href="/cv">CV</a>
+          <a href="/cv.pdf" target="_blank" rel="noopener">CV (PDF)</a>
+          <!--<a href="/cv">CV</a>-->
         </nav>
       </div>
     </header>

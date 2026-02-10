@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{article}
+
+% ---------- Layout ----------
+\usepackage[margin=1.6cm]{geometry}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xurl}
+
+\setlist[itemize]{leftmargin=*, itemsep=2pt, topsep=2pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0pt}{}[\titlerule]
+
+\newcommand{\cvitem}[2]{\textbf{#1} \hfill #2\\}
+\newcommand{\role}[3]{\textbf{#1} --- #2 \hfill \textit{#3}\\}
+\newcommand{\link}[2]{\href{#1}{#2}}
+
+% Slightly visible link color (still ATS-safe)
+\hypersetup{
+  colorlinks=true,
+  urlcolor=[rgb]{0.10,0.25,0.55}
+}
+
+% ---------- Header ----------
+\begin{document}
+
+{\LARGE \textbf{Siow Meng Low}}\\
+ML researcher — safe RL with feedback; exploring RL $\times$ LLMs\\[4pt]
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+Singapore \textbullet\ GMT+8 \textbullet\ Singapore Citizen &
+\faEnvelope\ \link{mailto:siowmeng@siowmenglow.com}{siowmeng@siowmenglow.com}\\
+\faGithub\ \link{https://github.com/siowmeng}{github.com/siowmeng} \textbullet\
+\faLinkedin\ \link{https://sg.linkedin.com/in/siowmeng}{linkedin.com/in/siowmeng} \textbullet\
+\faGraduationCap\ \link{https://scholar.google.com/citations?user=3lRmrq8AAAAJ\&hl=en\&oi=ao}{Google Scholar}
+&
+% Optional phone: keep or delete
+\faPhone\ +65 9233 1171
+\end{tabularx}
+
+\vspace{6pt}
+
+% ---------- Research Summary ----------
+\section*{Research Summary}
+\begin{itemize}
+  \item Focus: safe reinforcement learning and alignment from \textbf{sparse / weak feedback} (e.g., pass/fail safety labels), with interest in RL$\times$LLMs.
+  \item \textbf{TraCeS} turns rollout-level safety labels into per-step safety signals, enabling agents to learn safer behavior without hand-designed safety costs. 
+  \item Developed methods for safe learning/planning under implicit or hard-to-specify constraints (AAAI'22, ICAPS'23, arXiv'24; ICLR'25 workshop).
+\end{itemize}
+
+% ---------- Education ----------
+\section*{Education}
+\role{Singapore Management University (SMU), Singapore}{PhD, Computer Science}{2020 -- 2025}
+Thesis: \textit{From sparse feedback to sequential decision-making: Learning safety constraints with weak supervision.}
+\hfill \link{https://ink.library.smu.edu.sg/etd_coll/796/}{(thesis link)}\\
+Awards: SMU Presidential Doctoral Fellowship in Computing (AY2022/23, AY2023/24).\\
+
+\role{Imperial College London, United Kingdom}{MSc, Business Analytics}{2016 -- 2017}
+Distinction; Dean's List; Book Prize (Best overall performance).\\
+
+\role{National University of Singapore (NUS), Singapore}{BEng, Electrical Engineering (First Class Honours)}{2004 -- 2008}
+CGPA 4.64/5.0; NUS Centre of Intelligent Control Book Prize (2006); Dean's List (2005, 2006).\\
+
+% ---------- Publications ----------
+\section*{Publications}
+\textbf{Under review / working paper}
+\begin{itemize}
+  \item \textbf{Low, S. M.}, Gong, Z., Kumar, A. \textit{TraCeS: Learning per-timestep constraint-violation credit from sparse trajectory-level labels} (extended version; under review).
+\end{itemize}
+
+\textbf{Refereed and public manuscripts}
+\begin{itemize}
+  \item \textbf{Low, S. M.}, Kumar, A. \textit{TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback.}
+  ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival). \link{https://openreview.net/pdf?id=H1xdhKlN21}{[PDF]}
+  \item \textbf{Low, S. M.}, Kumar, A. \textit{Safe Reinforcement Learning with Learned Non-Markovian Safety Constraints.}\\
+  arXiv:2405.03005. \link{https://arxiv.org/pdf/2405.03005}{[PDF]}
+  \item \textbf{Low, S. M.}, Kumar, A., Sanner, S. \textit{Safe MDP planning by learning temporal patterns of undesirable trajectories and averting negative side effects.}
+  ICAPS 2023. \link{https://ojs.aaai.org/index.php/ICAPS/article/view/27241/27014}{[PDF]}
+  \item \textbf{Low, S. M.}, Kumar, A., Sanner, S. \textit{Sample-efficient iterative lower bound optimization of deep reactive policies for planning in continuous MDPs.}
+  AAAI 2022. \link{https://ojs.aaai.org/index.php/AAAI/article/view/21220}{[Publisher]}
+  \item Xiao, W., \textbf{Low, S. M.}, Tham, C. K., Das, S. \textit{Prediction based energy-efficient task allocation for delay-constrained wireless sensor networks.}
+  SECON Workshops 2009. \link{https://ieeexplore.ieee.org/document/5172956}{[Publisher]}
+\end{itemize}
+
+% ---------- Experience ----------
+\section*{Experience}
+\role{Singapore Management University (SMU), Singapore}{Adjunct Lecturer}{Aug 2025 -- Present}
+\begin{itemize}
+  \item COR-IS1704 Computational Thinking and Programming (Python), AY2024/25 T1. Final rating: above 90th percentile across SMU faculty.
+  \item CS205 Operating Systems (undergraduate core), AY2025/26 T1.
+  \item IS112 Data Management (ER modeling, relational schema, SQL, indexing / performance), AY2025/26 T2.
+\end{itemize}
+
+\role{Intech Process Automation, Singapore}{IIoT Data Science Lead}{2019 -- 2020}
+\begin{itemize}
+  \item Led applied ML work for industrial predictive analytics; designed product UI and built proof-of-concept workflows for data prep and model building.
+\end{itemize}
+
+\role{Amaris.AI, Singapore}{AI Data Scientist}{2018 -- 2019}
+\begin{itemize}
+  \item Built real-time social media text mining + sentiment platform; delivered automated forecasting solution for an electricity market operator.
+\end{itemize}
+
+\role{NEC Laboratories Singapore}{Researcher (Intelligent Data Analytics)}{2017 -- 2018}
+\begin{itemize}
+  \item Built ML models for risk profiling; improved prediction accuracy by 50\% over prior heuristics; delivered interpretable factor visualizations for intervention.
+\end{itemize}
+
+\role{IBM, Singapore}{Software Presales Consultant}{2013 -- 2015}
+Selected outcomes: designed proofs-of-concept; contributed to annual software revenue \textasciitilde US\$1M.\\
+
+\role{Deloitte, Singapore}{Senior Software Consultant}{2008 -- 2013}
+Led delivery teams; designed/integrated solutions across 30+ systems; improved productivity metrics by \textasciitilde 6$\times$.\\
+
+% ---------- Service ----------
+\section*{Service}
+\textbf{Reviewer}: NeurIPS (2024, 2025); ICLR (2025, 2026); AAAI (2023, 2024, 2026); ICAPS Planning \& Learning Track (2022, 2023).\\
+\textbf{Singapore Computer Society}: Professional Member
+
+% ---------- Skills ----------
+\section*{Skills}
+Research: Safe RL, weak supervision / sparse feedback, planning, constraint learning, optimization\\
+Programming: Python, PyTorch, NumPy/Pandas, Matplotlib, SQL \hfill Languages: English (fluent), Mandarin Chinese (fluent)\\
+Tools: Linux, Git, \LaTeX
+
+\end{document}
