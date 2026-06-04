@@ -1,28 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-// TraCeS: 
-// year={2025},
-// note={Non-archival workshop paper. Extended version under review; planned arXiv release.}
+
 const pubs = [
   {
-    year: 2025,
-    title: "TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback",
-    venue: "Under review · earlier: ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival)",
-    authors: ["Siow Meng Low", "Akshat Kumar"],
+    year: 2026,
+    title: "TraCeS: Learning per-timestep constraint-violation credit from sparse trajectory-level labels",
+    venue: "ICML 2026",
+    authors: ["Siow Meng Low", "Ze Gong", "Akshat Kumar"],
     highlight:
       "Turns rollout-level safety labels into per-step safety signals, enabling agents to learn safer behavior without hand-designed safety costs.",
     note:
-      "Extended version (major additions: theory + experiments) planned for arXiv.",
+      "Earlier version appeared at the ICLR 2025 Workshop on Bidirectional Human-AI Alignment (non-archival). Public proceedings/OpenReview version forthcoming.",
     links: [
-      { label: "Workshop PDF", href: "https://openreview.net/pdf?id=H1xdhKlN21" },
-      { label: "BibTeX", href: "#bibtex-low2025traces" },
+      { label: "ICML poster", href: "https://icml.cc/virtual/2026/poster/61935" },
     ],
-    bibId: "low2025traces",
-    bibtex: `@inproceedings{low2025traces,
-  title={TraCeS: Trajectory Based Credit Assignment From Sparse Safety Feedback},
-  author={Low, Siow Meng and Kumar, Akshat},
-  booktitle={ICLR 2025 Workshop on Bidirectional Human-AI Alignment},}
-}`,
   },
   {
     year: 2024,
@@ -169,10 +160,12 @@ const years = Object.keys(byYear).sort((a, b) => Number(b) - Number(a));
                 ))}
               </div>
 
-              <details class="bib" id={`bibtex-${p.bibId}`}>
-                <summary>BibTeX</summary>
-                <pre><code>{p.bibtex}</code></pre>
-              </details>
+              {p.bibtex && (
+                <details class="bib" id={p.bibId ? `bibtex-${p.bibId}` : undefined}>
+                  <summary>BibTeX</summary>
+                  <pre><code>{p.bibtex}</code></pre>
+                </details>
+              )}
             </li>
           ))}
         </ol>
